@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+#root{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20%;
+
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.button button{
+    all: unset;
+    border: 2px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+    border-radius: 15px;
+}
+
+.button button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: orange;
+}
+
+#name h1{
+    margin-bottom: 0;
+    transition: color 0.7s ease;
+}
+
+#name p{
+    margin-top: 5px
+}
+
+#name h1:hover{
+    color: orange;
+}
+
