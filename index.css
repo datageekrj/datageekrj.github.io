@@ -10,6 +10,10 @@ body{
     font-family: monospace;
 }
 
+p, h1{
+    text-align: center;
+}
+
 #root{
     height: 100%;
     display: flex;
@@ -63,3 +67,28 @@ body{
     color: orange;
 }
 
+@media (max-width: 844px) {
+    #buttons{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 50%;
+    }
+    #root{
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    #buttons{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 50%;
+    }
+    #root{
+        font-size: 14px;
+    }
+
+}
