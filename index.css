@@ -46,7 +46,7 @@ p, h1{
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.5s ease, border-color 0.5s ease;
-    border-radius: 15px;
+    overflow: hidden;
 }
 
 .button button:hover{
@@ -91,4 +91,25 @@ p, h1{
         font-size: 14px;
     }
 
+}
+
+.button{
+    position: relative;
+    overflow: hidden;
+}
+
+.button::before{
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: button-animation 2s ease infinite;
+    left: -150%;
+    top: 0;
+}
+
+@keyframes button-animation{
+    from {left: -150%}
+    to {left: 150%}
 }
