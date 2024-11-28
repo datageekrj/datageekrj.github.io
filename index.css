@@ -8,11 +8,32 @@ body{
     color: white;
     font-size: 1.5rem;
     font-family: monospace;
+    background: linear-gradient(90deg, darkblue, lightgreen);
+    position: relative;
+    overflow: hidden;
 }
+
+body::before{
+    content: "";
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    background: linear-gradient(125deg, transparent, lightgray, transparent);
+    animation: body-animation 3s ease infinite;
+    top: 0;
+    left: 0;
+}
+
+@keyframes body-animation{
+    from {left: -150%}
+    to {left: 150%}
+}
+
+
 
 #image{
     height: 30%;
-    background-image: url('Image.png');
+    /* background-image: url('Image.png'); */
     background-size: cover;
 }
 
@@ -94,6 +115,10 @@ p, h1{
         justify-content: center;
         height: 30%;
     }
+    #aboutSection{
+        width: 80%;
+        height: 100vh;
+    }
 }
 
 @media (max-width: 600px) {
@@ -105,6 +130,10 @@ p, h1{
     }
     #root{
         font-size: 14px;
+    }
+    #aboutSection{
+        width: 90%;
+        height: 100vh;
     }
 
 }
@@ -121,6 +150,8 @@ p, h1{
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 60%;
 }
 
 .goBack {
@@ -156,6 +187,7 @@ p, h1{
 .project-div{
     width: 250px;
     min-height: 300px;
+    /* height: auto; */
     border: 1px solid gray;
     background: linear-gradient(125deg, #004D40, black);
     border-radius: 20px;
@@ -198,7 +230,7 @@ p, h1{
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 10px 15px;
     font-size: 18px;
-    width: 60%;
+    width: 30%;
     border-radius: 20px;
     transition: border-color 0.5s ease;
     margin: auto;
@@ -207,4 +239,157 @@ p, h1{
 
 .project-div a:hover{
     border-color: rgba(255, 255, 255, 1);
+}
+
+.project-div .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contactSection{
+    display: flex;
+    flex-direction: column;
+    overflow-y:auto ;
+}
+
+#contactSectionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.workWithMe #contactMeDirectly{
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 20px;
+    transition: border-color 0.5s ease;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.workWithMe{
+    border: 1px solid gray;
+    width: 300px;
+    border-radius: 20px;
+    margin: 10px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background:linear-gradient(125deg, #004D40, black);
+    transition: background-color 0.6s ease, border-color 0.5s ease, transform 0.7s ease;
+
+}
+
+.workWithMe:hover{
+    background-color: lightgreen;
+    border-color: black;
+    transform: scale(1.05);
+}
+
+
+.workWithMe h1{
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    color: rgb(6, 244, 6);
+    padding: 10px;
+}
+
+.workWithMe a{
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 20px;
+    transition: border-color 0.5s ease;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.workWithMe a:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.workWithMe p{
+    font-size: 0.9rem;
+    text-align: left;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#contactMeDirectlySection{
+    width: 60%;
+    height: 60%;
+    color: white;
+    position: fixed;
+    z-index: 10;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: appear 0.6s ease;
+    background: linear-gradient(125deg,#004D40, black);
+    text-align: left;
+}
+
+#contactMeDirectlySection span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#contactMeDirectlySection span:hover{
+    background-color: gray;
+}
+
+@keyframes appear {
+    from {width : 0; height: 0;font-size: 0;}
+    to {width: 60%; height: 60%;font-size: 18px;}    
+}
+
+#contactMeDirectlySection ul{
+    font-size: 1.3rem;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+
+#contactMeDirectlySection li{
+    margin: 10px;
+}
+
+#contactMeDirectlySection a {
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 20px;
+    transition: border-color 0.5s ease;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
 }
