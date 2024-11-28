@@ -5,7 +5,9 @@ const allButtons = document.querySelectorAll(".button");
 const aboutSection = document.getElementById("aboutSection");
 const youTubeButton = document.querySelector(".youtube");
 const goBackButton = document.querySelector(".goBack");
-
+const projectSection = document.getElementById("projectSection");
+const projectButton = document.querySelector(".projects");
+const bodySection = document.querySelector("body");
 
 allButtons.forEach((btn) => {
     btn.addEventListener("click", (event) => {
@@ -31,4 +33,14 @@ goBackButton.addEventListener("click", (event) => {
     bottomRoot.style.display = "flex";
     goBackButton.style.display = "none";
     aboutSection.style.display = "none";
+    projectSection.style.display = "none";
+    bodySection.style.justifyContent = "center";
+    bodySection.style.alignItems = "";
+})
+
+projectButton.addEventListener("click", (event) => {
+    projectSection.style.display = "flex";
+    goBackButton.style.display = "block";
+    bodySection.style.justifyContent = "center";
+    bodySection.style.alignItems = "center";
 })
