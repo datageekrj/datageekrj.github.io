@@ -1,5 +1,5 @@
 const aboutButton = document.querySelector(".about");
-const topImage = document.getElementById("image");
+
 const bottomRoot = document.getElementById("root");
 const allButtons = document.querySelectorAll(".button");
 const aboutSection = document.getElementById("aboutSection");
@@ -16,7 +16,6 @@ const closeContactMeDirectlySection = document.getElementById("closeContactMeDir
 
 allButtons.forEach((btn) => {
     btn.addEventListener("click", (event) => {
-        topImage.style.display = "none";
         bottomRoot.style.display = "none";
     });
 })
@@ -27,13 +26,13 @@ aboutButton.addEventListener("click", (event) => {
 
 youTubeButton.addEventListener("click", (event) => {
     window.open("https://www.youtube.com/@datageekrj");
-    topImage.style.display = "block";
+    
     bottomRoot.style.display = "flex    ";
 })
 
 goBackButton.forEach((btn) => {
     btn.addEventListener("click", (event) => {
-        topImage.style.display = "block";
+        
         bottomRoot.style.display = "flex";
         // btn.style.display = "none";
         aboutSection.style.display = "none";
