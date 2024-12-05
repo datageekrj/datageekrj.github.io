@@ -1,0 +1,504 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    font-family: monospace;
+    background: linear-gradient(90deg, darkblue, lightgreen);
+    position: relative;
+    overflow: hidden;
+    background-image: url(Photo2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: white; 
+}
+
+
+p, h1{
+    text-align: center;   
+}
+
+#root{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#name{
+    height: 50%;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 80%;
+    flex-wrap: wrap;
+    height: 40%;
+    overflow: hidden;
+}
+
+.button button{
+    all: unset;
+    border: 5px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+    overflow: hidden;
+    font-weight: 1000;
+}
+
+.button button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: orange;
+}
+
+#name h1{
+    margin-bottom: 0;
+    transition: color 0.7s ease;
+}
+
+#name p{
+    margin-top: 5px
+}
+
+#name h1:hover{
+    color: orange;
+}
+
+#aboutSection {
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 90%;
+}
+
+.goBack {
+    all: unset;
+    border: 2px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.goBack:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: orange;
+}
+
+#projectSection{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+}
+
+#projects-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.project-div{
+    width: 250px;
+    min-height: 300px;
+    /* height: auto; */
+    border: 1px solid gray;
+    background: linear-gradient(125deg, #004D40, black);
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: background-color 0.6s ease, border-color 0.5s ease, transform 0.7s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.project-div h1{
+    font-size: 1.1rem;
+    text-align: left;
+    text-align: center;
+    color: rgb(6, 244, 6);
+    padding: 10px;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+}
+
+.project-div p{
+    font-size: 0.8rem;
+    text-align: left;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.project-div:hover{
+    background-color: lightgreen;
+    border-color: black;
+    transform: scale(1.05);
+}
+
+.project-div a{
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 30%;
+    border-radius: 20px;
+    transition: border-color 0.5s ease;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.project-div a:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.project-div .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contactSection{
+    display: flex;
+    flex-direction: column;
+    overflow-y:auto ;
+}
+
+#contactSectionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.workWithMe #contactMeDirectly{
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 20px;
+    transition: border-color 0.5s ease;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.workWithMe{
+    border: 1px solid gray;
+    width: 300px;
+    border-radius: 20px;
+    margin: 10px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background:linear-gradient(125deg, #004D40, black);
+    transition: background-color 0.6s ease, border-color 0.5s ease, transform 0.7s ease;
+
+}
+
+.workWithMe:hover{
+    background-color: lightgreen;
+    border-color: black;
+    transform: scale(1.05);
+}
+
+
+.workWithMe h1{
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    color: rgb(6, 244, 6);
+    padding: 10px;
+}
+
+.workWithMe a{
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 20px;
+    transition: border-color 0.5s ease;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.workWithMe a:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.workWithMe p{
+    font-size: 0.9rem;
+    text-align: left;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#contactMeDirectlySection{
+    width: 100%;
+    height: 60%;
+    color: white;
+    position: fixed;
+    z-index: 10;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: appear 0.6s ease;
+    background: linear-gradient(125deg,#004D40, black);
+    text-align: left;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+#contactMeDirectlySection span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#contactMeDirectlySection span:hover{
+    background-color: gray;
+}
+
+@keyframes appear {
+    from {width : 0; height: 0;font-size: 0;}
+    to {width: 100%; height: 60%;font-size: 18px;}    
+}
+
+#contactMeDirectlySection ul{
+    font-size: 1.3rem;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+
+#contactMeDirectlySection li{
+    margin: 10px;
+}
+
+#contactMeDirectlySection a {
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+    width: 80%;
+    border-radius: 20px;
+    transition: border-color 0.5s ease;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#skillSection{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-image: url("undraw_geniuses_9h9g.svg");
+}
+
+.skillCategory h1 {
+    cursor: pointer;
+    margin: 10px auto;
+    background: linear-gradient(125deg, #004D40, black);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.skillCategory h1:hover {
+    transform: scale(1.05);
+}
+
+.skills {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+#skillSection {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.skills li {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.round-image {
+    width: 150px; /* Set the width */
+    height: 150px; /* Set the height */
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #ddd; /* Optional: Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+    object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+@media (max-width: 900px) {
+
+    #name{
+        height: 20%;
+        margin-top: 60px;
+    }
+    #root{
+        height: 100%;
+    }
+    .image-container{
+        height: 10%;
+    }
+    .round-image {
+        width: 100px; /* Set the width */
+        height: 100px; /* Set the height */
+        margin-top: 10px;
+    }  
+    #root{
+        font-size: 1.1rem;
+    }
+    #buttons{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1rem;
+    }
+    /* #buttons{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 50%;
+    }
+    #root{
+        font-size: 1rem;
+    }  
+    #root{
+        height: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }  
+    #name{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30%;
+    }
+    #aboutSection{
+        width: 80%;
+        height: 100vh;
+    } */
+}
+
+@media (max-width: 600px) {
+    #name{
+        height: 20%;
+        margin-top: 60px;
+    }
+    #root{
+        height: 100%;
+    }
+    .image-container{
+        height: 10%;
+    }
+    .round-image {
+        width: 100px; /* Set the width */
+        height: 100px; /* Set the height */
+        margin-top: 10px;
+    }  
+    #root{
+        font-size: 1.0rem;
+    }
+    #buttons{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    
+    /* #buttons{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 50%;
+    }
+    #root{
+        font-size: 14px;
+    }
+    #aboutSection{
+        width: 90%;
+        height: 100vh;
+    }
+
+    #buttons button{
+        width: 100%;
+    } */
+
+}
