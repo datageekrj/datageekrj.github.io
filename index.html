@@ -1,269 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>datageekrj - Rahul Jha</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul Jha | AI/ML Consultant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .top {
+      text-align: center;
+    }
+
+    .top h1 {
+      font-size: 2.2rem;
+      margin: 0;
+      color: #9d00ff;
+    }
+
+    .top p {
+      margin: 6px 0 4px;
+      font-size: 1rem;
+      color: #cccccc;
+    }
+
+    .badge {
+      background-color: #222;
+      padding: 4px 12px;
+      border: 1px solid #9d00ff;
+      color: #9d00ff;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    .videos {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .video {
+      width: 360px;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    .links a:hover {
+      border-color: #9d00ff;
+      color: #9d00ff;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        justify-content: flex-start;
+        overflow-y: auto;
+      }
+
+      .videos {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .top h1 {
+        font-size: 1.7rem;
+      }
+
+      .top p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="root">
-        <div class="image-container">
-            <img src="Photo.jpg" alt="Profile Picture" class="round-image">
-        </div>
-        <div id="name">
-            <h1>Rahul Jha</h1>
-            <p>AI/ML Expert | NLP, Computer Vision, Audio, & Cloud Specialist</p>
-        </div>
-        <div id="buttons">
-            <div class="button about"><button>About</button></div>
-            <div class="button projects"><button>Projects</button></div>
-            <div class="button skills"><button>Skills</button></div>
-            <div class="button youtube"><button>YouTube</button></div>
-            <div class="button contact"><button>Work with Me</button></div>
-        </div>
-    </div>
-    <div id="projectSection" style="display: none;">
-        <button class="goBack"> 🔙 Go Back</button>
-        <div id="projects-container">
-            <div class="project-div">
-                <h1>Title: Chat With Wikipedia</h1>
-                <p> Description:  Welcome to the Chat with Wikipedia web application! This application allows users to interact with Wikipedia in a chat format. Simply enter the title of a Wikipedia page, and you can ask questions about that page directly, and the app will return relevant information in a conversational way.  🤖</p>
-                <div class="links">
-                    <a href="https://github.com/datageekrj/Chat-With-Wikipedia" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Chat-With-Wikipedia" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-div">
-                <h1>Title: Page Chat Assistant - Chrome Extension</h1>
-                <p>Description: Page Chat Assistant is a Chrome extension that enables users to load the content of any webpage and chat about it directly in a sidebar. </p>
-                <div class="links">
-                    <a href="https://github.com/datageekrj/Chat-With-Any-Website-Chrome-Extension" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Chat-With-Any-Website-Chrome-Extension" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-div">
-                <h1>Title: Search Using Word2Vec</h1>
-                <p>Description: In this project, I've developed a search solution tailored for online book publishers to enhance their readers' experience. </p>
-                <div class="links">
-                    <a href="https://github.com/datageekrj/Search-Solution-using-Word2Vec" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Search-Solution-using-Word2Vec" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-div">
-                <h1>Title: Personal Voice Assistant</h1>
-                <p>Description: This project is a voice-based personal assistant built using Flask, the Gemini API for generating AI-based responses, and ElevenLabs for generating voice output. </p>
-                <div class="link">
-                    <a href="https://github.com/datageekrj/Personal-Voice-Assistant" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Personal-Voice-Assistant" target="_blank">Demo</a>
-                </div>
-            </div>
 
-            <div class="project-div">
-                <h1>Title: Chat With Wikipedia</h1>
-                <p> Description:  Welcome to the Chat with Wikipedia web application! This application allows users to interact with Wikipedia in a chat format. Simply enter the title of a Wikipedia page, and you can ask questions about that page directly, and the app will return relevant information in a conversational way.  🤖</p>
-                <div class="links">
-                    <a href="https://github.com/datageekrj/Chat-With-Wikipedia" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Chat-With-Wikipedia" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-div">
-                <h1>Title: Page Chat Assistant - Chrome Extension</h1>
-                <p>Description: Page Chat Assistant is a Chrome extension that enables users to load the content of any webpage and chat about it directly in a sidebar. </p>
-                <div class="links">
-                    <a href="https://github.com/datageekrj/Chat-With-Any-Website-Chrome-Extension" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Chat-With-Any-Website-Chrome-Extension" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-div">
-                <h1>Title: Search Using Word2Vec</h1>
-                <p>Description: In this project, I've developed a search solution tailored for online book publishers to enhance their readers' experience. </p>
-                <div class="links">
-                    <a href="https://github.com/datageekrj/Search-Solution-using-Word2Vec" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Search-Solution-using-Word2Vec" target="_blank">Demo</a>
-                </div>
-            </div>
-            <div class="project-div">
-                <h1>Title: Personal Voice Assistant</h1>
-                <p>Description: This project is a voice-based personal assistant built using Flask, the Gemini API for generating AI-based responses, and ElevenLabs for generating voice output. </p>
-                <div class="link">
-                    <a href="https://github.com/datageekrj/Personal-Voice-Assistant" target="_blank">View</a>
-                    <a href="https://github.com/datageekrj/Personal-Voice-Assistant" target="_blank">Demo</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="aboutSection" style="text-align: left; display: none;">
-        <button class="goBack"> 🔙 Go Back</button>
-        <p>👋 Hello
-
-            <br>
-            <br>
-
-            <span><strong>Brief Introduction</strong></span>
-            <br>
-            <br>
-
-            I’m Rahul Jha, a passionate Data Scientist and Machine Learning Engineer with 🌟 over 6 years of experience 🌟 in Data Science, Machine Learning, Data Engineering, and Artificial Intelligence. I hold a Master's degree in Statistics and am driven by a deep commitment to leveraging data to solve complex problems. I’m also enthusiastic about sharing knowledge through teaching and content creation 🎓. Additionally, I’m a cloud-certified professional, having worked across all the major cloud platforms ☁️.
-            
-            <br>
-            <br>
-
-            <span><strong>🚀 Professional Background</strong></span>
-
-            <br>
-            <br>
-            
-            Throughout my career, I’ve had the opportunity to work with top-tier Indian consulting firms and a leading Indian bank. My consulting work in ML, DS, and AI for global leaders in sectors like auto insurance and retail has delivered impactful solutions. Some of my key projects include:
-            
-            <br>
-            <br>
-            🔹 AI-Powered Image Annotation Web App: Built an interactive web application using the YOLO model for real-time image annotation.
-            
-            <br>
-            🔹 Automated Image CAPTCHA Solver: Developed a custom solution to automate form submissions by solving 1000s of image CAPTCHAs using TensorFlow and Google Cloud Platform (GCP).
-            <br>
-            🔹 AutoML-Based Prediction & Recommendation Engine: Created a scalable engine for predictive analytics and recommendations using AutoML.
-            <br>
-            🔹 Predictive Analytics for Auto Insurance: Developed ML models to predict claim probabilities, reducing claim processing time by 20% using logistic regression and decision trees.
-            <br>
-            🔹 Customer Segmentation for a Retail Giant: Implemented a clustering algorithm with PCA, boosting targeted marketing campaign effectiveness by 15%.
-            <br>
-            🔹 Credit Risk Assessment for a Major Bank: Built a credit scoring system using SVMs, improving loan approval accuracy and reducing default rates by 10%.
-            <br>
-
-            <span><strong>🛠️ Techniques</strong></span>
-
-            <br>
-            <br>
-
-            
-            1. Language Modelling: Transformers, BERT
-            2. Stable Diffusion Modeling
-            3. Deep Convolution Generative Adversarial Networks (DCGAN)
-            4. Custom Text-to-Image Models
-            5. Image Segmentation
-
-            
-            <br>
-            <br>
-
-
-            ☁️ Cloud Expertise
-            I’m certified across AWS, Google Cloud (Vertex AI, Gemini), and Azure, allowing me to design and deploy scalable, secure ML solutions across any infrastructure. My cloud expertise ensures flexibility and efficiency in delivering your projects.
-            
-            <br>
-            <br>
-            🎥 Teaching and Content Creation
-            I’m also passionate about teaching 📚. My YouTube channel, datageekrj, features courses like "Mastering Time Series Forecasting with SKTime" 📊. Whether it’s Python tutorials, ML concepts, or AI applications, my content is designed to empower learners to achieve their goals.
-            
-            <br>
-            <br>
-            🔑 Why Choose Me?
-            1. Expertise: Strong foundation in both theory and application of ML and Data Science
-            2. Experience: Proven track record of delivering tailored solutions for industry leaders
-            3. Education: Ability to break down complex concepts into easy-to-understand lessons
-            4. Commitment: Dedication to continuous learning and staying at the cutting edge of tech
-
-            <br>
-            <br>
-            🤝 Let’s Collaborate!
-            I’m excited to work with you on your next project—whether it’s developing a machine learning model, creating a data analysis strategy, or designing an educational course. Let’s harness the power of data and take your business to new heights!
-            
-            📬 Feel free to connect on Upwork or LinkedIn—I look forward to working with you!
-            
-            <br>
-            <br>
-
-            💡 I LOVE BUILDING AI-POWERED WEB APPS!
-            
-            Best regards,
-            Rahul Jha 🌟</p>
-    
+  <div class="container">
+    <div class="top">
+      <h1>Rahul Jha</h1>
+      <p>AI/ML Consultant • Educator • Creator</p>
+      <div class="badge">Top Rated Plus Freelancer on Upwork</div>
     </div>
 
-    <div id="skillSection" style="display: none;">
-        <button class="goBack" >🔙 Go Back</button>
-    
-        <div class="skillCategory">
-            <h1 onclick="toggleSkillsExclusive(this)">Programming Languages</h1>
-            <ul class="skills" style="display: none;">
-                <li>Python (Expert)</li>
-                <li>JavaScript</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>R</li>
-                <li>MATLAB</li>
-            </ul>
-        </div>
-    
-        <div class="skillCategory">
-            <h1 onclick="toggleSkillsExclusive(this)">Cloud Technologies</h1>
-            <ul class="skills" style="display: none;">
-                <li>AWS (SageMaker, EC2, S3)</li>
-                <li>Microsoft Azure (ML Studio)</li>
-                <li>Google Cloud Platform (AI and Vision APIs)</li>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-            </ul>
-        </div>
-    
-        <div class="skillCategory">
-            <h1 onclick="toggleSkillsExclusive(this)">Machine Learning & AI</h1>
-            <ul class="skills" style="display: none;">
-                <li>Scikit-learn</li>
-                <li>TensorFlow</li>
-                <li>PyTorch</li>
-                <li>Transformers (Hugging Face)</li>
-                <li>Reinforcement Learning (OpenAI Gym)</li>
-                <li>AutoML Techniques</li>
-            </ul>
-        </div>
-    
-        <div class="skillCategory">
-            <h1 onclick="toggleSkillsExclusive(this)">NLP & Computer Vision</h1>
-            <ul class="skills" style="display: none;">
-                <li>Natural Language Processing (BERT, GPT, spaCy)</li>
-                <li>Computer Vision (OpenCV, YOLO, Faster R-CNN)</li>
-                <li>OCR Techniques (Tesseract, EasyOCR)</li>
-                <li>Image Segmentation and Classification</li>
-                <li>Speech-to-Text (DeepSpeech, Whisper)</li>
-            </ul>
-        </div>
+    <div class="videos">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/GUdy9TAr9Dw" title="Project Demo" allowfullscreen></iframe>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/jsVrGUYLaiY" title="Teaching Sample" allowfullscreen></iframe>
+      </div>
     </div>
 
-    <div id="contactSection" style="display: none;">
-        <button class="goBack"> 🔙 Go Back</button>
-        <div id="contactSectionContainer">
-            <div class="workWithMe">
-                <h1>UpWork</h1>
-                <p>Successfully completed over 20 projects with a 100% job satisfaction rate and consistent 5-star reviews.</p>
-                <a href="https://www.upwork.com/freelancers/~01c5bd330d4be8b0d8?mp_source=share" target="_blank">View UpWork Profile</a>
-            </div>
-            
-            <div class="workWithMe">
-                <h1>Fiverr</h1>
-                <p>Delivered more than 50 projects, earning outstanding 5-star feedback from clients.</p>
-                <a href="https://www.fiverr.com/datageekrjrj" target="_blank">View Fiverr Profile</a>
-            </div>
-            
-            <div class="workWithMe">
-                <h1>Reach Out</h1>
-                <p>Bringing nearly 5 years of experience, having collaborated with top clients globally on various successful projects.</p>
-                <div id="contactMeDirectly">Contact Me</div>
-            </div>
-        </div>
+    <div class="links">
+      <a href="mailto:datageekrj@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/rahul-jha-bbab34135/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/datageekrj" target="_blank">GitHub</a>
+      <a href="https://medium.com/@datageekrj" target="_blank">Medium</a>
+      <a href="https://youtube.com/@datageekrj" target="_blank">YouTube</a>
     </div>
+  </div>
 
-    <div id="contactMeDirectlySection" style="display: none;">
-        <span id="closeContactMeDirectlySection">Close</span>
-        <ul>
-            <li>Email: rahul.jha.stats@gmail.com</li>
-            <li>Phone: +91 - 8375017130</li>
-            <li><a href="https://www.linkedin.com/in/rahul-jha-bbab34135/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/datageekrj" target="_blank">Github</a></li>
-        </ul>
-    </div>
-    <script src="index.js" defer></script>
 </body>
 </html>
